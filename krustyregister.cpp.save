@@ -1,0 +1,170 @@
+/* Name: Ermithe Tilusca
+Date: 1/20/2025
+Assignment: #1
+Due Date: 1/23/2025
+About this project: This program will simulate ordering from the Krusty Krab. It ask the user how many of certain items they'd like, calculate,and print the total for the customer, including tax.
+Assumptions: assumes correct user input
+
+All work below was performed by Ermithe Tilusca */
+
+
+#include <iostream> 
+using namespace std;
+
+int main()
+{
+      //Constant double variables, the prices of items on the menu  never change
+      const double KRABBYPATTYPRICE = 3.50;
+      const double KELPSHAKEPRICE = 1.00;
+      const double BARNACLEFRIESPRICE = 1.50;
+      const double CORALBITSPRICE = 2.00;
+      
+      //declear and initialize constant dollar sign
+      const char DOLLARSIGN = '$';
+
+      //declear integer variable for user's input
+      int pattiesTotal;
+      int shakesTotal;
+      int friesTotal;
+      int bitsTotal;
+
+      //declear varibles for  total price of each item after user's input
+      double pattiesTotalPrice;
+      double shakesTotalPrice;
+      double friesTotalPrice;
+      double bitsTotalPrice;      
+
+      //declear tax variables
+      double totalPriceBeforeTax;
+      double underseaTax;
+      double totalPriceAfterTax;
+       
+      //welcome message
+      cout << "Welcome to the Krusty Krab, Home of the Krabby Patty." << endl;
+      cout << "May I take your order?" << endl << endl;
+
+      //display menu prices
+      cout << "\tGALLEY GRUB:" << endl;
+      cout << "\tKrabby Patty " << DOLLARSIGN << KRABBYPATTYPRICE << endl;      
+      cout << "\tKelp Shake " << DOLLARSIGN << KELPSHAKEPRICE << endl;
+      cout << "\tBarnacle Fries " << DOLLARSIGN << BARNACLEFRIESPRICE << endl;
+      cout << "\tCoral Bits " << DOLLARSIGN << CORALBITSPRICE << endl << endl;
+
+      //Prompt user for an input
+      cout << "How many Krabby Patties? ";
+      cin >> pattiesTotal;
+      cout << "How many Kelp Shakes? ";
+      cin >> shakesTotal;
+      cout << "How many orders of Barnacle fries? ";
+      cin >> friesTotal;
+      cout << "How many orders of Coral Bits? ";
+      cin >> bitsTotal;
+      cout << endl;
+
+      //initialize and Calculate price
+      pattiesTotalPrice = pattiesTotal * KRABBYPATTYPRICE;
+      shakesTotalPrice = shakesTotal * KELPSHAKEPRICE;
+      friesTotalPrice = friesTotal * BARNACLEFRIESPRICE;
+      bitsTotalPrice = bitsTotal * CORALBITSPRICE; 
+     
+      totalPriceBeforeTax = pattiesTotalPrice + shakesTotalPrice + friesTotalPrice + bitsTotalPrice; 
+      underseaTax = totalPriceBeforeTax * 0.055;
+      totalPriceAfterTax = totalPriceBeforeTax + underseaTax; 
+
+      //Dispay total before tax, tax amount, and total after tax
+      cout << "Order Total (Bore Undersea Tax): " << DOLLARSIGN << totalPriceBeforeTax << endl;
+      cout << "Undersea Tax: " << DOLLARSIGN << underseaTax << end;
+      cout << "Final Order Total including Undersea Tax: " << DOLLARSIGN << totalPriceAfterTax << endl; endl;
+
+      //Thank you message
+      cout << "Thanks for dining at the Krusty Krab!" << endl;
+
+    return 0;  
+}
+/* Name: Ermithe Tilusca
+Date: 1/20/2025
+Assignment: #1
+Due Date: 1/23/2025
+About this project: This program will simulate ordering from the Krusty Krab. It ask the user how many of certain items they'd like, calculate,and print the total for the customer, including tax.
+Assumptions: assumes correct user input
+
+All work below was performed by Ermithe Tilusca */
+
+
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+      //Constant double variables, the prices of items on the menu  never change
+      const double KRABBYPATTYPRICE = 3.50;
+      const double KELPSHAKEPRICE = 1.00;
+      const double BARNACLEFRIESPRICE = 1.50;
+      const double CORALBITSPRICE = 2.00;
+      
+      //declear and initialize constant dollar sign
+      const char DOLLARSIGN = '$';
+
+      //declear integer variable for user's input
+      int pattiesTotal;
+      int shakesTotal;
+      int friesTotal;
+      int bitsTotal;
+
+      //declear varibles for  total price of each item after user's input
+      double pattiesTotalPrice;
+      double shakesTotalPrice;
+      double friesTotalPrice;
+      double bitsTotalPrice;      
+
+      //declear tax variables
+      double totalPriceBeforeTax;
+      double underseaTax;
+      double totalPriceAfterTax;
+       
+      //welcome message
+      cout << "Welcome to the Krusty Krab, Home of the Krabby Patty." << endl;
+      cout << "May I take your order?" << endl << endl;
+
+      //display menu prices
+      cout << "\tGALLEY GRUB:" << endl;
+      cout << "\tKrabby Patty " << DOLLARSIGN << KRABBYPATTYPRICE << endl;      
+      cout << "\tKelp Shake " << DOLLARSIGN << KELPSHAKEPRICE << endl;
+      cout << "\tBarnacle Fries " << DOLLARSIGN << BARNACLEFRIESPRICE << endl;
+      cout << "\tCoral Bits " << DOLLARSIGN << CORALBITSPRICE << endl << endl;
+
+      //Prompt user for an input
+      cout << "How many Krabby Patties? ";
+      cin >> pattiesTotal;
+      cout << "How many Kelp Shakes? ";
+      cin >> shakesTotal;
+      cout << "How many orders of Barnacle fries? ";
+      cin >> friesTotal;
+      cout << "How many orders of Coral Bits? ";
+      cin >> bitsTotal;
+      cout << endl;
+
+      //set to 2 decimal places
+      cout << fixed << showpoint << setprecision(2);
+
+      //initialize and Calculate price
+      pattiesTotalPrice = pattiesTotal * KRABBYPATTYPRICE;
+      shakesTotalPrice = shakesTotal * KELPSHAKEPRICE;
+      friesTotalPrice = friesTotal * BARNACLEFRIESPRICE;
+      bitsTotalPrice = bitsTotal * CORALBITSPRICE; 
+     
+      totalPriceBeforeTax = pattiesTotalPrice + shakesTotalPrice + friesTotalPrice + bitsTotalPrice; 
+      underseaTax = totalPriceBeforeTax * 0.055;
+      totalPriceAfterTax = totalPriceBeforeTax + underseaTax; 
+
+      //Dispay total before tax, tax amount, and total after tax
+      cout << "Order Total (Bore Undersea Tax): " << DOLLARSIGN << totalPriceBeforeTax << endl;
+      cout << "Undersea Tax: " << DOLLARSIGN << underseaTax << end;
+      cout << "Final Order Total including Undersea Tax: " << DOLLARSIGN << totalPriceAfterTax << endl; endl;
+
+      //Thank you message
+      cout << "Thanks for dining at the Krusty Krab!" << endl;
+
+    return 0;  
+}
